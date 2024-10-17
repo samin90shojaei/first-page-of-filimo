@@ -1,0 +1,158 @@
+$bg-day: #c2c2c2;
+$bg-night : #151515;
+$header-day : rgb(255, 255, 255, 0.7);
+$footer-day: rgb(180, 180, 180);
+$header-night : rgba(0, 0, 0, 0.8);
+$footer-night: rgb(25, 25, 25);
+
+body{
+    direction: rtl;
+}
+
+img{
+    border-radius: 5px !important;
+}
+
+.h-500{
+    height: 500px;
+}
+
+#bg-fp{
+    height: 600px;
+    background-image: url("../img/main/posters/qxzms_desktop_1_v1.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.pt-fp{
+    padding-top: 15rem;
+}
+
+$bg : (
+    'light-mode' : $bg-day,
+    'bg-headerd': $header-day,
+    'bg-footerd': $footer-day,
+);
+@each $class, $color in $bg{
+    .#{$class}{
+        background-color: $color;
+        color: black;
+        direction:rtl;
+    }
+};
+
+$dark : (
+    'dark-mode' : $bg-night,
+    'bg-headern': $header-night,
+    'bg-footern': $footer-night,
+);
+@each $class, $color in $dark{
+    .#{$class}{
+        background-color: $color;
+        color: white;
+        direction:rtl;
+    }
+};
+
+.fixed-top{
+    height: 52px;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(32px);
+}
+
+.fixed-top div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.fixed-down{
+    position: sticky;
+    bottom: 0px;
+    z-index: 100;
+}
+
+.m-05{
+    margin-bottom: 5px;
+}
+.p-0{
+    padding: 0px !important;
+}
+@font-face{
+    font-family: 'yekan';
+    src: url('../font/Yekan.woff') format('woff');
+}
+@font-face{
+    font-family: 'kodak';
+    src: url('../font/pixelboy-BKoodakBold.woff') format('woff');
+}
+@font-face{
+    font-family: 'parastoo';
+    src: url('../font/Parastoo.woff') format('woff');
+}
+$yekan : 'yekan';
+$fonts : (
+    'yekan' : 'yekan',
+    'kodak' : 'kodak',
+    'parastoo' : 'parastoo',
+);
+@each $class, $font in $fonts{
+    .#{$class}{
+        font-family: $font;
+    }
+};
+
+@media screen and (max-width: 800px) { 
+    .navbar-nav{ 
+        visibility: hidden;
+    }
+    
+  }
+
+.bg-radial-kids{
+    background: -webkit-linear-gradient(245deg,#05c3ff 0,#ffffff 40%);
+}
+
+.bg-banner-end{
+    background: radial-gradient(100% 410.68% at 100% 100%,rgba(0,0,0,0) 0,rgba(0,29,13,.54) 53.55%,rgba(0,0,0,0) 100%);
+    // mix-blend-mode: color;
+}
+.bg-cinema{
+    background-image: url("../img/main/posters/bg-cinama.webp");
+    background-size: cover;
+}
+.bg-cinema2{
+    background: rgba(255,255,255,.06);
+    border: 1px solid #33353d;
+    box-sizing: border-box;
+    box-shadow: 0 10px 36px #00000040;
+    backdrop-filter: blur(32px);
+    border-radius: 12px;
+    padding: 10px;
+}
+.sa{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%);
+    pointer-events: none; 
+}
+
+.sam{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.sami{
+    position: relative;
+    display: inline-block;
+}
